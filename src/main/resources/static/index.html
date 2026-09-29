@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DonateHub - Management Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Include FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                <span>DonateHub</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" data-target="dashboard"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+                <a href="#" class="nav-item" data-target="donors"><i class="fa-solid fa-users"></i> Donors</a>
+                <a href="#" class="nav-item" data-target="drives"><i class="fa-solid fa-box-open"></i> Drives</a>
+                <a href="#" class="nav-item" data-target="items"><i class="fa-solid fa-shirt"></i> Items</a>
+                <a href="#" class="nav-item" data-target="recipients"><i class="fa-solid fa-building-ngo"></i> Recipients</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-header">
+                <h2 id="page-title">Dashboard Overview</h2>
+                <div class="user-profile">
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=6c5ce7&color=fff" alt="Admin">
+                </div>
+            </header>
+
+            <div class="content-wrapper" id="content-area">
+                <!-- Content will be injected here by app.js -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals for Forms -->
+    <div id="modal-container" class="modal-overlay hidden">
+        <div class="modal-content glass-effect">
+            <div class="modal-header">
+                <h3 id="modal-title">Form Title</h3>
+                <button id="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Form goes here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast hidden">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-message">Operation successful!</span>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>
